@@ -1,0 +1,53 @@
+using System;
+namespace Rubles
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int feed = 20;
+            int drink = 20;
+            int wash = 20;
+            int sleep = 20;
+            while (feed > 0 && drink > 0 && wash > 0 && sleep > 0)
+            {
+                Console.WriteLine("Параметры Тамогочи");
+                Console.WriteLine($"Еда {feed}, Вода {drink}, Чистота {wash}, Сон {sleep}");
+                feed -= 5;
+                drink -= 5;
+                wash -= 5;
+                sleep -= 5;
+                Console.WriteLine("Что желаете сделать?");
+                Console.Write("1.Покормить 2.Напоить 3.Помыть 4.Уложить спать. Введите номер ");
+                int operation = int.Parse(Console.ReadLine());
+                switch (operation)
+                {
+                    case 1:
+                        feed += 20;
+                        break;
+                    case 2:
+                        drink += 20;
+                        break;
+                    case 3:
+                        wash += 20;
+                        break;
+                    case 4:
+                        sleep += 20;
+                        break;
+                    default:
+                        feed = 0;
+                        break;
+                }
+                Console.WriteLine(" " +
+                    " "
+                    );
+
+            }
+            Console.WriteLine("К сожалению или к счастью, Ваш Тамогочи помер >:(" +
+                "");
+            Console.WriteLine("Параметры Тамогочи");
+            Console.WriteLine($"Еда {feed}, Вода {drink}, Чистота {wash}, Сон {sleep}");
+            Console.Read();
+        }
+    }
+}
