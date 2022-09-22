@@ -9,17 +9,20 @@ namespace Rubles
             int drink = 20;
             int wash = 20;
             int sleep = 20;
+
             while (feed > 0 && drink > 0 && wash > 0 && sleep > 0)
             {
+                Console.Clear();
                 Console.WriteLine("Параметры Тамогочи");
                 Console.WriteLine($"Еда {feed}, Вода {drink}, Чистота {wash}, Сон {sleep}");
                 feed -= 5;
                 drink -= 5;
                 wash -= 5;
                 sleep -= 5;
-                Console.WriteLine("Что желаете сделать?");
+                Console.WriteLine("\nЧто желаете сделать?");
                 Console.Write("1.Покормить 2.Напоить 3.Помыть 4.Уложить спать. Введите номер ");
                 int operation = int.Parse(Console.ReadLine());
+
                 switch (operation)
                 {
                     case 1:
@@ -38,14 +41,9 @@ namespace Rubles
                         feed = 0;
                         break;
                 }
-                Console.WriteLine(" " +
-                    " "
-                    );
-
             }
-            Console.WriteLine("К сожалению или к счастью, Ваш Тамогочи помер >:(" +
-                "");
-            Console.WriteLine("Параметры Тамогочи");
+            Console.WriteLine("\nК сожалению или к счастью, Ваш Тамогочи помер >:(");
+            Console.WriteLine("\nПараметры Тамогочи");
             Console.WriteLine($"Еда {feed}, Вода {drink}, Чистота {wash}, Сон {sleep}");
             Console.Read();
         }
