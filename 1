@@ -39,7 +39,12 @@ namespace Rubles
                         sleep += 20;
                         break;
                     default:
-                        feed = 0;
+                        Console.WriteLine("Такой операции не сущестует. Нажмите любую кнопку и введите корректный номер");
+                        feed += 5;
+                        drink += 5;
+                        wash += 5;
+                        sleep += 5;
+                        Console.ReadKey();
                         break;
                 }
             }
